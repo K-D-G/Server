@@ -101,8 +101,9 @@ bool Application::start(std::string app_name, int port_number, int app_protocol,
 	
 	//Start the threading and accept sockets
 	while(true){
+		SocketHandler handler;
 		SocketData data={accept(listen_socket, NULL, NULL), log, buffer_size, this};
-		threader.new_thread<SocketHandler, SocketData>(data);
+		Threader::new_thread<SocketHandler, SocketData>(handler, data);
 	}
 
 	closesocket(listen_socket);
