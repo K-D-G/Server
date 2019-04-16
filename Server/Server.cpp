@@ -5,6 +5,8 @@
 #include <cstring>
 #include "ApplicationServer.h"
 
+using namespace Server;
+
 class ExampleHTTPServer :public Application {
 public:
 	void on_start() {

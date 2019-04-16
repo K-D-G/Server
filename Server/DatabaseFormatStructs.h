@@ -29,11 +29,20 @@ namespace Server{
 
 	//The data inside must not be touched it is used by the operating system
 	//This struct exists as a place holder
-	struct lock_byte_page{
+	struct LockBytePage{
 		char data[513]; //Might be 511 instead
 	};
 
-	struct free_list{
-		
+	//Says which pages are not in active use
+	//These pages aren't really touched to avoid using disk I/O alot
+	struct FreeListPage{
+		//Index 0 is the index of the next free list page (0 if there are no more)
+		//Index 1 (Called L) is the number of leaf page pointers to follow
+		//Index 2-L+1 inclusive is the page numbers
+		unsigned int* pages;
+	};
+
+	struct BTreePage{
+	
 	};
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -154,6 +154,7 @@
     <ClCompile Include="ApplicationServer.cpp" />
     <ClCompile Include="DatabaseFormatStructs.cpp" />
     <ClCompile Include="DatabaseManager.cpp" />
+    <ClCompile Include="HTMLFormatter.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="SocketHandler.cpp" />
     <ClCompile Include="Threader.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="ApplicationServer.h" />
     <ClInclude Include="DatabaseFormatStructs.h" />
     <ClInclude Include="DatabaseManager.h" />
+    <ClInclude Include="HTMLFormatter.h" />
     <ClInclude Include="SocketHandler.h" />
     <ClInclude Include="Threader.h" />
   </ItemGroup>
