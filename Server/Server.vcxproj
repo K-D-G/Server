@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationServer.cpp" />
+    <ClCompile Include="DatabaseFormatStructs.cpp" />
     <ClCompile Include="DatabaseManager.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="SocketHandler.cpp" />
@@ -159,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationServer.h" />
+    <ClInclude Include="DatabaseFormatStructs.h" />
     <ClInclude Include="DatabaseManager.h" />
     <ClInclude Include="SocketHandler.h" />
     <ClInclude Include="Threader.h" />

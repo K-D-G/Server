@@ -2,6 +2,7 @@
 
 #include <string>
 #include <fstream>
+#include "DatabaseFormatStructs.h"
 
 namespace Server{
 	struct DatabaseObject{

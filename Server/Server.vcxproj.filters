@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\database">
+      <UniqueIdentifier>{5f90942b-962d-4fba-99e1-ed2ac64be9e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\database">
+      <UniqueIdentifier>{b70f1702-d761-466f-999b-10b98e2d5272}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Server.cpp">
@@ -27,8 +33,11 @@
     <ClCompile Include="Threader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DatabaseFormatStructs.cpp">
+      <Filter>Source Files\database</Filter>
+    </ClCompile>
     <ClCompile Include="DatabaseManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,8 +50,11 @@
     <ClInclude Include="Threader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DatabaseFormatStructs.h">
+      <Filter>Header Files\database</Filter>
+    </ClInclude>
     <ClInclude Include="DatabaseManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\database</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
