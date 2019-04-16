@@ -27,9 +27,6 @@
     <ClCompile Include="ApplicationServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SocketHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Threader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,12 +36,12 @@
     <ClCompile Include="DatabaseManager.cpp">
       <Filter>Source Files\database</Filter>
     </ClCompile>
+    <ClCompile Include="HTMLFormatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationServer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SocketHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Threader.h">
@@ -55,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="DatabaseManager.h">
       <Filter>Header Files\database</Filter>
+    </ClInclude>
+    <ClInclude Include="HTMLFormatter.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

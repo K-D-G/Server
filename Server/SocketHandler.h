@@ -10,25 +10,16 @@
 #endif
 
 namespace Server{
-	struct SocketData {
+	struct SocketData{
 #ifdef WIN32
 		SOCKET socket;
+#endif
+#if defined(__APPLE__)||defined(__linux__)
+		int socket;
 #endif
 		bool log;
 		int buffer_size;
 		Application* master;
-	};
-
-	struct Request {
-		int body_length;
-		std::string body;
-		std::string source_ip;
-	};
-
-	struct Response {
-		int body_length;
-		std::string body;
-		std::string destination_ip;
 	};
 
 	class SocketHandler{

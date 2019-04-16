@@ -8,7 +8,7 @@ namespace Server{
 		Threader();
 		~Threader();
 
-		template<class Processor, typename Data>
-		static void new_thread(Processor processor, Data data);
+		template<class T, typename Data>
+		static void new_thread(T* processor, Data data);
 	};
 }

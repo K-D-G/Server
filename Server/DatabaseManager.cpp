@@ -11,5 +11,6 @@ DatabaseManager::~DatabaseManager(){
 }
 
 DatabaseObject* DatabaseManager::query_table(std::string table_name, std::string query){
-
+	DatabaseObject* result={};
+	return result;
 }

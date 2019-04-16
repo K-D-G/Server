@@ -156,7 +156,6 @@
     <ClCompile Include="DatabaseManager.cpp" />
     <ClCompile Include="HTMLFormatter.cpp" />
     <ClCompile Include="Server.cpp" />
-    <ClCompile Include="SocketHandler.cpp" />
     <ClCompile Include="Threader.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +163,6 @@
     <ClInclude Include="DatabaseFormatStructs.h" />
     <ClInclude Include="DatabaseManager.h" />
     <ClInclude Include="HTMLFormatter.h" />
-    <ClInclude Include="SocketHandler.h" />
     <ClInclude Include="Threader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

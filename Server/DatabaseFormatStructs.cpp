@@ -1,3 +1,3 @@
-#include "database/DatabaseFormatStructs.h"
+#include "DatabaseFormatStructs.h"
 
 using namespace Server;
