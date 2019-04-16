@@ -104,7 +104,8 @@ bool Application::start(std::string app_name, int port_number, int app_protocol,
 	
 	//Start the threading and accept sockets
 	PassThroughStruct pass_through_data={listen_socket, log, buffer_size};
-	Threader::new_thread<Application, PassThroughStruct>(this, pass_through_data);
+	//Threader::new_thread<Application, PassThroughStruct>(this, pass_through_data);
+	Threads.push_back(std::thread(&Application::main, this, pass_through_data));
 
 	closesocket(listen_socket);
 	WSACleanup();
@@ -147,7 +148,8 @@ bool Application::start(std::string app_name, int port_number, int app_protocol,
 	on_start();
 
 	PassThroughStruct pass_through_data={server_fd, address, address_length, log, buffer_size};
-	Threader::new_thread<Application, PassThroughStruct>(this, pass_through_data);
+	//Threader::new_thread<Application, PassThroughStruct>(&this, pass_through_data);
+	Threads.push_back(std::thread(&Application::main, this, data));
 
 #endif
 	return true;
@@ -156,9 +158,10 @@ bool Application::start(std::string app_name, int port_number, int app_protocol,
 #ifdef WIN32
 void Application::main(PassThroughStruct s){
 	while(true){
-		SocketHandler* handler=new SocketHandler();
+		SocketHandler handler;
 		SocketData data={accept(s.listen_socket, NULL, NULL), s.log, s.buffer_size, this};
-		Threader::new_thread<SocketHandler, SocketData>(handler, data);
+		//Threader::new_thread<SocketHandler, SocketData>(handler, data);
+		Threads.push_back(std::thread(&SocketHandler::main, std::ref(handler), data));
 	}
 }
 #endif
@@ -168,7 +171,8 @@ void Application::main(PassThroughStruct s){
 	while(true){
 		SocketHandler handler;
 		SocketData data={accept(s.server_fd, (sockaddr*)&s.address, (socklen_t*)&s.address_length), s.log, s.buffer_size, this};
-		Threader::new_thread<SocketHandler, SocketData>(handler, data);
+		//Threader::new_thread<SocketHandler, SocketData>(&handler, data);
+		Threads.push_back(std::thread(&SocketHandler::main, std::ref(handler), data));
 	}
 }
 #endif

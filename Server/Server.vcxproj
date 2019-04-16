@@ -95,6 +95,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -152,18 +153,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationServer.cpp" />
-    <ClCompile Include="DatabaseFormatStructs.cpp" />
-    <ClCompile Include="DatabaseManager.cpp" />
-    <ClCompile Include="HTMLFormatter.cpp" />
     <ClCompile Include="Server.cpp" />
-    <ClCompile Include="Threader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationServer.h" />
-    <ClInclude Include="DatabaseFormatStructs.h" />
-    <ClInclude Include="DatabaseManager.h" />
-    <ClInclude Include="HTMLFormatter.h" />
-    <ClInclude Include="Threader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
